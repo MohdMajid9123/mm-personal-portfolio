@@ -1,0 +1,93 @@
+.Hero_container {
+  @extend %div;
+  @media screen and (max-width: 992px) {
+    justify-content: center;
+  }
+
+  //   left side of hero container
+  .h_content {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+
+    .h_left {
+      width: 30rem;
+      position: relative;
+      @media screen and (max-width: 992px) {
+        text-align: center;
+      }
+    }
+    .h_icon {
+      margin-top: 3rem;
+      @include flex_center(flex-start);
+      gap: 2rem;
+      @media screen and (max-width: 992px) {
+        text-align: center;
+        justify-content: center;
+      }
+      img {
+        width: 2rem;
+
+        &:hover {
+          transform: scale(1.05);
+        }
+      }
+    }
+  }
+  .h_button {
+    @extend %button;
+    width: 12rem;
+  }
+
+  //   right side of hero section
+
+  .h_right {
+    width: 40rem;
+    text-align: center;
+    position: relative;
+
+    img {
+      width: 30rem;
+    }
+
+    .best_design img,
+    .emoji img,
+    .web_developer img {
+      width: 3rem;
+    }
+
+    .emoji {
+      position: absolute;
+      top: 1rem;
+      left: 0;
+      width: 4rem;
+
+      img {
+        width: 8rem;
+      }
+    }
+    .web_developer {
+      top: 1rem;
+      right: 1rem;
+      @extend %small_box;
+    }
+    .best_design {
+      bottom: 1rem;
+      left: 2rem;
+      @extend %small_box;
+    }
+
+    .blur {
+      @extend %bg_shadow;
+      left: 63%;
+      top: 0;
+      height: 100%;
+    }
+
+    .blur1 {
+      @extend %bg_shadow;
+      width: 100%;
+      bottom: 0;
+    }
+  }
+}

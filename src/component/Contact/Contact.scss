@@ -1,0 +1,36 @@
+.contact_container {
+  margin: 10rem auto 0 0;
+  width: 90vw;
+  flex-wrap: wrap;
+  gap: 4rem;
+  @include flex_center(space-around);
+  padding: 2rem;
+
+  //   right section
+
+  .right {
+    position: relative;
+    .blur {
+      @extend %bg_shadow;
+      bottom: 1rem;
+      left: 3rem;
+      width: 20rem;
+      height: 15rem;
+    }
+    input {
+      width: 23rem;
+      height: 2.6rem;
+      border: 2px solid $orange;
+      outline: none;
+    }
+    textarea {
+      width: 23rem;
+      border: 2px solid $orange;
+      outline: none;
+      resize: none;
+    }
+    .btn {
+      @extend %button;
+    }
+  }
+}

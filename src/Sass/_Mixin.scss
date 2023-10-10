@@ -1,0 +1,49 @@
+@mixin flex_center($content) {
+  display: flex;
+  justify-content: $content;
+  align-items: center;
+}
+
+%button {
+  border: none;
+  outline: none;
+  border-radius: 20px;
+  background-color: $orange;
+  padding: 7px 16px;
+  color: white;
+  cursor: pointer;
+  transition: all 0.5s ease;
+
+  &:hover {
+    background-color: $white;
+    border: 1px solid $orange;
+    color: $orange !important;
+    box-shadow: 0 0 5px $orange;
+  }
+}
+
+%small_box {
+  position: absolute;
+  @include flex_center(center);
+  gap: 2rem;
+  background: white;
+  border-radius: 1rem;
+  padding: 0.3rem 1rem;
+  box-shadow: $boxShadow;
+}
+
+%bg_shadow {
+  background: #c7f1f5;
+  position: absolute;
+  filter: blur(20px);
+  z-index: -9;
+  overflow: hidden;
+}
+
+%div {
+  margin: 8rem auto;
+  width: 90vw;
+  @include flex_center(space-between);
+  flex-wrap: wrap;
+  gap: 4rem;
+}

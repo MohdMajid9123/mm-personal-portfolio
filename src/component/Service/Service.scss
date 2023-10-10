@@ -1,0 +1,121 @@
+.Service_container {
+  @extend %div;
+  flex-wrap: wrap;
+  height: auto;
+
+  @media screen and (max-width: 992px) {
+    justify-content: center;
+  }
+
+  //   left section code
+  .s_left {
+    width: 30rem;
+    @media screen and (max-width: 992px) {
+      text-align: center;
+      justify-content: center;
+    }
+
+    p {
+      margin-bottom: 1rem;
+    }
+
+    .btn {
+      @extend %button;
+      width: 11rem;
+    }
+  }
+
+  //   right section code
+
+  .s_right {
+    width: 50rem;
+    min-width: 40rem;
+    display: flex;
+    flex-wrap: wrap;
+    min-height: 45rem;
+    position: relative;
+    justify-content: center;
+
+    & > :nth-child(1) {
+      top: 0;
+      right: 10rem;
+      position: absolute;
+    }
+    & > :nth-child(2) {
+      position: absolute;
+      top: 14rem;
+      left: 1rem;
+    }
+
+    & > :nth-child(3) {
+      position: absolute;
+      top: 22rem;
+      right: 10rem;
+    }
+
+    @media screen and (max-width: 992px) {
+      min-height: 42rem;
+      width: 42rem;
+
+      & > :nth-child(1) {
+        top: 0;
+        right: 1rem;
+      }
+      & > :nth-child(2) {
+        top: 0;
+        right: 1rem;
+      }
+      & > :nth-child(3) {
+        top: 20rem;
+        right: 18rem;
+      }
+    }
+    @media screen and (max-width: 576px) {
+      min-height: 60rem;
+      & > :nth-child(1) {
+        top: 0;
+        right: 14rem;
+      }
+      & > :nth-child(2) {
+        top: 40rem;
+        left: 12rem;
+      }
+      & > :nth-child(3) {
+        top: 20rem;
+        left: 12rem;
+      }
+    }
+    @media screen and (max-width: 400px) {
+      & > :nth-child(1) {
+        right: 10rem;
+      }
+    }
+
+    .s_card {
+      width: 18rem;
+      height: 18rem;
+      text-align: center;
+      border: 5px solid $orangeCard;
+      box-shadow: $boxShadow;
+      padding-top: 2rem;
+
+      img {
+        width: 5rem;
+      }
+      h3 {
+        font-size: 1.6rem;
+        margin-bottom: 1rem;
+      }
+      p {
+        margin-bottom: 1rem;
+      }
+      a {
+        color: $orange;
+
+        &:hover {
+          color: $gray;
+        }
+      }
+    }
+  }
+}

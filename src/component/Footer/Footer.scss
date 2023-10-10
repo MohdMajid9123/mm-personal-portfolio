@@ -1,0 +1,34 @@
+.last_container {
+  width: 100%;
+  height: 30rem;
+  background-image: url("/img/wave.png");
+
+  background-size: cover;
+  position: relative;
+
+  .content {
+    position: absolute;
+    top: 70%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    .copywrite {
+      margin-bottom: 2rem;
+
+      h3 {
+        margin-left: 2rem;
+        color: $white;
+      }
+    }
+
+    img {
+      width: 3rem;
+      margin: 0 1rem;
+      cursor: pointer;
+
+      &:hover {
+        transform: scale(1.1);
+      }
+    }
+  }
+}

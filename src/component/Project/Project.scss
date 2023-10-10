@@ -1,0 +1,49 @@
+.project_container {
+  margin: 6rem auto;
+  width: 90vw;
+
+  h1 {
+    margin: 1rem 0 3rem 1rem;
+  }
+
+  .card_container {
+    @include flex_center(center);
+    gap: 2rem;
+    flex-wrap: wrap;
+
+    .card {
+      width: 25rem;
+      height: 20rem;
+      position: relative;
+      overflow: hidden;
+      box-shadow: $box-shadow;
+
+      .layer_card {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.4);
+        transform: translateY(20rem);
+        transition: transform 0.4s ease;
+        @include flex_center(center);
+
+        a {
+          color: $white !important;
+          font-size: 2rem;
+        }
+      }
+      &:hover .layer_card {
+        transform: translateY(0);
+        transition: transform 0.4s ease;
+      }
+
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+      }
+    }
+  }
+}

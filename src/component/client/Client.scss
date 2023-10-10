@@ -1,0 +1,65 @@
+.container_swiper {
+  margin: 8rem auto;
+  width: 90vw;
+  height: 90vh;
+  position: relative;
+  @media screen and (max-width: 992px) {
+    height: 39vh;
+  }
+
+  h1 {
+    margin: 2rem 0 3rem 1rem;
+  }
+
+  .Main_swiper {
+    height: 80vh;
+
+    @media screen and (max-width: 992px) {
+      height: 37vh;
+    }
+    .item {
+      box-shadow: $box-shadow;
+      text-align: center;
+      padding: 2rem 1rem;
+      width: 20rem;
+      min-height: 20rem;
+      height: 25rem;
+
+      img {
+        width: 5rem;
+        height: 5rem;
+        border-radius: 50%;
+        margin-bottom: 2rem;
+      }
+
+      h3 {
+        font-size: 1.6rem;
+        margin-bottom: 1rem;
+      }
+
+      p {
+        text-align: justify;
+      }
+    }
+
+    .blur {
+      @extend %bg_shadow;
+      left: 50%;
+      bottom: 0;
+      height: 50%;
+      width: 50%;
+      border-radius: 50%;
+    }
+    .blur1 {
+      @extend %bg_shadow;
+      height: 50%;
+      width: 50%;
+      border-radius: 50%;
+      top: 0;
+    }
+  }
+}
+.swiper-pagination {
+  bottom: 1rem !important;
+  z-index: 9999 !important;
+}
